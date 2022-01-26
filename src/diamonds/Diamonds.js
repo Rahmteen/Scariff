@@ -10,8 +10,9 @@ import state from "../store"
 
 const dummy = new Object3D()
 export default function Diamonds() {
-  const { nodes } = useLoader(GLTFLoader, "/diamond.glb")
-  useLayoutEffect(() => nodes.pCone1_lambert1_0.geometry.center(), [])
+  const { nodes } = useLoader(GLTFLoader, "/hed.glb")
+  console.log(nodes)
+  useLayoutEffect(() => nodes.HEAD.geometry.center(), [])
 
   const { size, gl, scene, camera, clock } = useThree()
   const { contentMaxWidth, sectionHeight, mobile } = useBlock()
@@ -32,7 +33,7 @@ export default function Diamonds() {
 
   useFrame(() => {
     state.diamonds.forEach((data, i) => {
-      const t = clock.getElapsedTime() / 2
+      const t = clock.getElapsedTime() / 5
       const { x, offset, scale, factor } = data
       const s = (contentMaxWidth / 35) * scale
       data.pos.set(mobile ? 0 : x, lerp(data.pos.y, -sectionHeight * offset * factor + (state.top.current / state.zoom) * factor, 0.1), 0)
@@ -65,5 +66,5 @@ export default function Diamonds() {
     gl.render(scene, camera)
   }, 1)
 
-  return <instancedMesh ref={model} layers={1} args={[nodes.pCone1_lambert1_0.geometry, null, state.diamonds.length]} position={[0, 0, 50]} />
+  return <instancedMesh ref={model} layers={1} args={[nodes.HEAD.geometry, null, state.diamonds.length]} position={[0, 0, 50]} />
 }
