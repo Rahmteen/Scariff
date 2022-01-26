@@ -60,11 +60,11 @@ const state = {
     }
   ],
   stripes: [
-    { offset: 0, color: "#000", height: 13 },
-    { offset: 6.3, color: "#000", height: 20 }
+    { offset: 0, color: "#141414", height: 13 },
+    { offset: 6.3, color: "#141414", height: 20 }
   ],
   diamonds: [
-    { x: 0, offset: 0.15, pos: new Vector3(), scale: 14, factor: 4 },
+    { x: 0, offset: 0.15, pos: new Vector3(), scale: 12, factor: 4 },
     { x: 2, offset: 1.1, pos: new Vector3(), scale: 1.8, factor: 2.1 },
     { x: -5, offset: 2, pos: new Vector3(), scale: 1.8, factor: 2.5 },
     { x: 0, offset: 3.2, pos: new Vector3(), scale: 1.8, factor: 1.75 },

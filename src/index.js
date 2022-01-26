@@ -58,12 +58,12 @@ function Content() {
       <Block factor={1} offset={0}>
         <Block factor={1.2}>
           <Text left size={w * 0.15} position={[-w / 3.2, 0.5, -1]} color="#d40749">
-            Pryce
+            HEDS
           </Text>
         </Block>
         <Block factor={1.0}>
           <Html className="bottom-left" style={{ color: "white" }} position={[-canvasWidth / 2, -canvasHeight / 2, 0]}>
-            It was the year 2076.{mobile ? <br /> : " "}The substance had arrived.
+            Decentralized audio/visual collective{mobile ? <br /> : " "}
           </Html>
         </Block>
       </Block>
